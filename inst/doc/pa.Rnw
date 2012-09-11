@@ -603,7 +603,7 @@ can be written as
 \end{center}
 where $R_{active} = R_P - R_B$.
 
-\section{Multi-Period Brinson Tools}
+\subsection{Multi-Period Brinson Tools}
 
 In practice, analyzing a single-period portfolio is meaningless as
 portfolio managers and their clients are more interested in the
@@ -615,10 +615,10 @@ below.
 <<>>=
 data(quarter)
 br.multi <- brinson(quarter, date.var = "date",
-                cat.var = "sector",
-                bench.weight = "benchmark",
-                portfolio.weight = "portfolio",
-                ret.var = "return")
+                    cat.var = "sector",
+                    bench.weight = "benchmark",
+                    portfolio.weight = "portfolio",
+                    ret.var = "return")
 @
 
 
@@ -766,7 +766,7 @@ value based on the regression model. Size contributes 1\% of the
 negative active return of the portfolio and value causes the portfolio
 to lose the other 10.0\%.
 
-\section{Single-Period Regression Tools}
+\subsection{Single-Period Regression Tools}
 
 Another conventional attribution methodolody is the regression-based
 analysis. As mentioned, the \pkg{pa} package provides tools to analyze
@@ -804,7 +804,7 @@ portfolio made a loss of 2.91\% and the benchmark lost
 contributed 0.32\%, 0.05\%, and 0.29\%, respectively.
 
 
-\section{Multi-Period Regression Model}
+\subsection{Multi-Period Regression Model}
 
 The same challenge of linking arithmetic and geometric returns is
 present in multi-period regression model. We apply the optimized
@@ -833,7 +833,7 @@ Thus, the overall active return $R_{active}$ can be decomposed into
 \end{center}
 where $U$ is the residual across $T$ periods.
 
-\section{Multi-Period Regression Tools}
+\subsection{Multi-Period Regression Tools}
 <<>>=
 rb.multi <- regress(quarter, date.var = "date",
                 ret.var = "return",
@@ -1052,7 +1052,7 @@ attribution.
 
 \address{Yang Lu and David Kane\\
   \email{yang.lu@williams.edu} and \\
-  \email{dkane@acadian-asset.com}}
+  \email{dave.kane@gmail.com}}
 
 \bibliography{pa}
 

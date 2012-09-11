@@ -220,15 +220,17 @@ setMethod("plot",
                 geom_line(aes(linetype = Type)) +
                   scale_y_continuous()+ geom_hline(yintercept = 0) + 
                     ylab("Return") + xlab("Date") +
-                      opts(panel.background = theme_blank(),
-                           title = "Portfolio Performance",
-                           axis.line = theme_blank(),
-                           panel.grid.minor = theme_blank(),
-                           panel.grid.major = theme_blank(),
-                           axis.text.x = theme_text(angle = 90, hjust = 0.5),
-                           plot.background = theme_rect(fill = NA, colour = NA))
+                      ggtitle("Portfolio Performance") + 
+                      theme(panel.background = element_blank(),
+                            ## title = "Portfolio Performance",
+                            axis.line = element_blank(), ## theme_blank(),
+                            panel.grid.minor = element_blank(),
+                            panel.grid.major = element_blank(),
+                            axis.text.x = element_text(angle = 90, hjust = 0.5),
+                            plot.background = element_rect(fill = NA, colour = NA))
+                              
               print(temp.plot)
-
+              
             }
           }
           

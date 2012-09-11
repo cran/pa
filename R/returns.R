@@ -150,7 +150,7 @@ setMethod("returns",
             ret.mat[no.row + 4, 1] <- object@act.ret
 
             colnames(ret.mat) <- as.character(unique(object@universe[[object@date.var]]))
-            rownames(ret.mat) <- c(CapLeading(object@reg.var),
+            rownames(ret.mat) <- c(object@reg.var,
                                    "Residual",
                                    "Portfolio Return",
                                    "Benchmark Return",

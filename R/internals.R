@@ -66,17 +66,17 @@
     geom_bar(width = 0.5, position = position_dodge()) + coord_flip() +
       ylab(type) + xlab("Sector") +
         geom_hline(yintercept = 0) +
-          opts(panel.background = theme_blank(),
-               title = title, 
-               axis.line = theme_blank(),
-               panel.grid.minor = theme_blank(),
-               panel.grid.major = theme_blank(),
-               plot.background = theme_rect(fill = NA, colour = NA))
+          ggtitle(title) + 
+          theme(panel.background = element_blank(), ## theme_blank(),
+                ## title = title, 
+                axis.line = element_blank(),
+                panel.grid.minor = element_blank(),
+                panel.grid.major = element_blank(),
+                plot.background = element_rect(fill = NA, colour = NA))
   
   return(bar.plot)
   
 }
-
 
 
 ## faceted plot
@@ -95,6 +95,7 @@
   facet.plot <- ggplot(df, aes(Name, Value, fill = Type)) +
     geom_bar(position = position_dodge()) + coord_flip() + theme_bw()+
       facet_wrap( ~ Date) + scale_x_discrete(name = "Sector") + ylab(type) +
-        opts(title = title)
+        ## opts(title = title)
+        ggtitle(title)
   return(facet.plot)
 }
