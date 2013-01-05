@@ -26,9 +26,9 @@
 \value{
 
   Return a matrix if the input object is of class \code{brinson} with
-  portfolio and benchmark exposures, and return a list if the input
-  object is of class \code{brinsonMulti} including portfolio and
-  benchmark exposures for each period.
+  portfolio, benchmark exposures, and their differences, and return a
+  list if the input object is of class \code{brinsonMulti} including
+  portfolio, benchmark exposures, and their differences for each period.
 
   If the input \code{var} is categorical, it will show exposure of each
   sub-groups within the category. If the input \code{var} is continuous,

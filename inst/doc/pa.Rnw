@@ -1,8 +1,8 @@
 \documentclass[a4paper]{report}
-
 \usepackage[round]{natbib}
 \usepackage{amssymb}
-\usepackage{Rnews}
+%% \usepackage{Rnews}
+\usepackage{RJournal}
 \usepackage{fancyvrb}
 \usepackage{Sweave}
 
@@ -345,7 +345,8 @@ $R_{selection}$ is the sum of country selection effect, sector
 selection effect, and the product of country and sector selection
 effects:
 \begin{eqnarray*}
-  R_{selection} & = & R_{country \, selection} + R_{sector \, selection} + R_{country \, selection} * R_{sector \, selection}\\ 
+  R_{selection} & = & R_{country \, selection} + R_{sector \, selection} \\
+  & & + R_{country \, selection} * R_{sector \, selection}\\ 
   & = & \sum\limits_{j = 1}^N {}_CW^B_j{}_CR^P_j - \sum\limits_{j = 1}^N {}_CW^B_j{}_CR^B_j \\ 
   & + & \sum\limits_{j = 1}^N {}_SW^B_j{}_SR^P_j - \sum\limits_{j = 1}^N {}_SW^B_j{}_SR^B_j \\
   & + & (\sum\limits_{j = 1}^N {}_CW^B_j{}_CR^P_j - \sum\limits_{j = 1}^N {}_CW^B_j{}_CR^B_j) \\

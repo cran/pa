@@ -5,10 +5,10 @@ library(pa)
 
 ## data(jan)
 ## b1 <- brinson(x = jan)
-## truth <- exposure(b1)
+## truth <- exposure(b1, var = "sector")
 ## data(quarter)
 ## b2 <- brinson(x = quarter)
-## truth.multi <- exposure(b2)
+## truth.multi <- exposure(b2, var = "sector")
 ## save(truth, truth.multi, file = "exposure.test.RData")
 
 load("exposure.test.RData")

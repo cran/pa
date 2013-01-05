@@ -23,7 +23,10 @@ setMethod("exposure",
                                        object@universe[[var]],
                                        sum))
               
-              colnames(expo.mat) <- c("Portfolio", "Benchmark")
+              ## updated -- show difference betw portfolio and benchmark
+              expo.mat <- cbind(expo.mat, expo.mat[,1] - expo.mat[,2])
+              colnames(expo.mat) <- c("Portfolio", "Benchmark", "Diff")
+
               return(expo.mat)
             } else {
 
@@ -36,7 +39,10 @@ setMethod("exposure",
                                 tapply(temp[[object@bench.weight]],
                                        temp$q,
                                        sum))
-              colnames(expo.mat) <- c("Portfolio", "Benchmark")
+
+              expo.mat <- cbind(expo.mat, expo.mat[,1] - expo.mat[,2])
+              
+              colnames(expo.mat) <- c("Portfolio", "Benchmark", "Diff")
               rownames(expo.mat)[1] <- "Low"
               rownames(expo.mat)[5] <- "High"
               return(expo.mat)
@@ -72,7 +78,9 @@ setMethod("exposure",
                                                           sum)})
               colnames(bench.mat) <- object@date.var
               expo.list[[2]] <- bench.mat
-              names(expo.list) <- c("Portfolio", "Benchmark")
+              expo.list[[3]] <- expo.list[[1]] - expo.list[[2]]
+              
+              names(expo.list) <- c("Portfolio", "Benchmark", "Diff")
               return(expo.list)
             } else {
               ## continous (5 quantiles)
@@ -103,7 +111,9 @@ setMethod("exposure",
               rownames(bench.mat)[1] <- "Low"
               rownames(bench.mat)[5] <- "High"
               expo.list[[2]] <- bench.mat
-              names(expo.list) <- c("Portfolio", "Benchmark")
+              expo.list[[3]] <- expo.list[[1]] - expo.list[[2]]
+              
+              names(expo.list) <- c("Portfolio", "Benchmark", "Diff")
               return(expo.list)
             }
           }
@@ -136,7 +146,10 @@ setMethod("exposure",
                                        object@universe[[var]],
                                        sum))
               
-              colnames(expo.mat) <- c("Portfolio", "Benchmark")
+              ## updated -- show difference betw portfolio and benchmark
+              expo.mat <- cbind(expo.mat, expo.mat[,1] - expo.mat[,2])
+              colnames(expo.mat) <- c("Portfolio", "Benchmark", "Diff")
+
               return(expo.mat)
             } else {
 
@@ -149,7 +162,10 @@ setMethod("exposure",
                                 tapply(temp[[object@benchmark.weight]],
                                        temp$q,
                                        sum))
-              colnames(expo.mat) <- c("Portfolio", "Benchmark")
+              ## updated -- show difference betw portfolio and benchmark
+              expo.mat <- cbind(expo.mat, expo.mat[,1] - expo.mat[,2])
+              colnames(expo.mat) <- c("Portfolio", "Benchmark", "Diff")
+
               rownames(expo.mat)[1] <- "Low"
               rownames(expo.mat)[5] <- "High"
               return(expo.mat)
@@ -191,7 +207,10 @@ setMethod("exposure",
                                                           sum)})
               colnames(bench.mat) <- object@date.var
               expo.list[[2]] <- bench.mat
-              names(expo.list) <- c("Portfolio", "Benchmark")
+              expo.list[[3]] <- expo.list[[1]] - expo.list[[2]]
+              
+              names(expo.list) <- c("Portfolio", "Benchmark", "Diff")
+
               return(expo.list)
             } else {
               ## continous (5 quantiles)
@@ -222,7 +241,10 @@ setMethod("exposure",
               rownames(bench.mat)[1] <- "Low"
               rownames(bench.mat)[5] <- "High"
               expo.list[[2]] <- bench.mat
-              names(expo.list) <- c("Portfolio", "Benchmark")
+              expo.list[[3]] <- expo.list[[1]] - expo.list[[2]]
+              
+              names(expo.list) <- c("Portfolio", "Benchmark", "Diff")
+
               return(expo.list)
             }
           } else {

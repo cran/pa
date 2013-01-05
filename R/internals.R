@@ -54,7 +54,7 @@
                       type,  ## for ylab, either exposure or return
                       title
                       ){
-  ## circumvent R CMD check
+  ## for R CMD check ONLY
   Name <- NULL
   rm(Name)
   Value <- NULL
@@ -63,7 +63,8 @@
   rm(Type)
   
   bar.plot <- ggplot(df, aes(x = Name, y = Value, fill = Type)) +
-    geom_bar(width = 0.5, position = position_dodge()) + coord_flip() +
+    geom_bar(width = 0.5, position = position_dodge(), stat = "identity") +
+      coord_flip() +
       ylab(type) + xlab("Sector") +
         geom_hline(yintercept = 0) +
           ggtitle(title) + 
@@ -93,7 +94,7 @@
   rm(Type)
   
   facet.plot <- ggplot(df, aes(Name, Value, fill = Type)) +
-    geom_bar(position = position_dodge()) + coord_flip() + theme_bw()+
+    geom_bar(position = position_dodge(), stat = "identity") + coord_flip() + theme_bw()+
       facet_wrap( ~ Date) + scale_x_discrete(name = "Sector") + ylab(type) +
         ## opts(title = title)
         ggtitle(title)

@@ -1,5 +1,8 @@
 ## Yang Lu Yang.Lu@williams.edu
 
+## added in brinson attribution based on the input category
+## (e.g. sectors) on Jan 1, 2013
+
 ## returns method for brinson class
 
 setMethod("returns",
@@ -10,6 +13,24 @@ setMethod("returns",
             ## round to certain digits
             options(digits = 3)
             
+            ## returns by category
+            portret <- object@ret.port
+            benchret <- object@ret.bench
+            portwt <- object@weight.port
+            benchwt <- object@weight.bench
+            
+            cat.allocation <- (portwt - benchwt) * benchret
+            cat.selection <- (portret - benchret) * benchwt
+            cat.interaction <- (portret - benchret) * (portwt - benchwt)
+            
+            cat.ret <- cbind(cat.allocation,
+                             cat.selection,
+                             cat.interaction)
+            colnames(cat.ret) <- c("Allocation", "Selection", "Interaction")
+            cat.ret <- rbind(cat.ret, apply(cat.ret, 2, sum))
+            rownames(cat.ret)[nrow(cat.ret)] <- "Total"
+            
+            ## overall brinson attribution
             q1 <- object@q1
             q2 <- object@q2
             q3 <- object@q3
@@ -31,7 +52,15 @@ setMethod("returns",
                                    "Selection Effect",
                                    "Interaction Effect",
                                    "Active Return")
-            return(ret.mat)
+
+            ## organize output
+            output.list <- list()
+            output.list[[1]] <- cat.ret * 10000
+            output.list[[2]] <- ret.mat
+            names(output.list) <- c("Attribution by category in bps",
+                                    "Aggregate")
+            
+            return(output.list)
           }
           )
 

@@ -5,9 +5,7 @@ library(pa)
 
 ## data(jan)
 ## truth <- regress(x = jan)
-## data(quarter)
-## truth.multi <- regress(x = quarter)
-## save(truth, truth.multi, file = "regress.test.RData")
+## save(truth, file = "regress.test.RData")
 
 load("regress.test.RData")
 
@@ -17,8 +15,4 @@ data(jan)
 result <- regress(x = jan)
 stopifnot(all.equal(result, truth))
 
-## Multi-period
-data(quarter)
-result.multi <- regress(x = quarter)
-stopifnot(all.equal(result.multi, truth.multi))
 

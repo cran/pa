@@ -26,8 +26,10 @@
   
 \value{
 
-  When the input is an object of class \code{brinson}, return a matrix
-  of 4 rows including \code{Allocation}, \code{Selection},
+  When the input is an object of class \code{brinson}, return a list of
+  two matrices. The first one is the allocation, selection, and
+  interaction for each groups in the specified category. The second
+  matrix has 4 rows including \code{Allocation}, \code{Selection},
   \code{Interaction}, and \code{Active Return}.
 
   When the input is an object of class \code{brinsonMulti}, return a
