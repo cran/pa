@@ -1,5 +1,5 @@
-60bc820093dc0ce59db837314323fbca *DESCRIPTION
-ae27d368fca9646bee88a19317fd2074 *NAMESPACE
+ba92540c06a3a493b59e76a66344bdbb *DESCRIPTION
+f2ccc730e0fbfb91af23d3ae2314ed87 *NAMESPACE
 c4c42677e035df3c585067d43ea19c69 *R/AllClasses.R
 7cd3dff7662714855bbdce151b0eb52b *R/AllGenerics.R
 732a310767cadabf4b27f5f07e7b9110 *R/brinson.R
@@ -10,15 +10,16 @@ ca1abe85f9e1dd87c9f5b761213f0129 *R/regress.R
 ee7a3bce96556b80018f5aa0efe88212 *R/returns.R
 b3422ba8af89fa45612dc2403983afee *R/show.R
 0c501f9935083e9c27a31b21321874df *R/summary.R
+d1f6758eb56ff475042bf44d867584c2 *build/vignette.rds
 391d4553738fa6f8262b9c4107374516 *data/datalist
 88570a3fc94d6cde2042e9366ca3c33a *data/jan.RData
 87e6309148d90725a86c1db941fd3e69 *data/quarter.RData
 449461fd2367d9c882581b2c12b4758d *data/test.RData
 2bd1151debbe7fdc6257a8d0bfa8c163 *data/year.RData
-5fed91cdbd52c171c585582b35af504b *inst/doc/RJournal.sty
-ed66175418fae228ec6c41723b25ef32 *inst/doc/pa.Rnw
-1b0b5c5b4bcc14170866637e72031917 *inst/doc/pa.bib
-5ebd17a002b9efdae018d10a136e3c7a *inst/doc/pa.pdf
+ff91b49f39e9585ea83d4c81a5779d28 *inst/doc/LuKane_RJournal_submission_final.pdf
+dd0eab9bcf69f2cdc8999ecbd6fb5285 *inst/doc/pa.R
+3453056f31cf6cbbcfd549599eb5a482 *inst/doc/pa.Rnw
+2a55a192c91e9db1118f5b7a2d9ea8a2 *inst/doc/pa.pdf
 cde26418947f70754b7e33058f957530 *man/brinson-class.Rd
 879640e335c44480478814133a767e23 *man/brinson.Rd
 8e620aa07ed7b9efc4dac725b023fd03 *man/brinsonMulti-class.Rd
@@ -47,3 +48,5 @@ b7139a07fad84be8b26fb175cbf4ad1d *tests/show.test.R
 c64770416a629475d0154b8a5ad37b69 *tests/show.test.RData
 03991ed2bfc6b7665630f96e18427043 *tests/summary.test.R
 272a240d996b6bb3efc4b458a95d6539 *tests/summary.test.RData
+3453056f31cf6cbbcfd549599eb5a482 *vignettes/pa.Rnw
+1b0b5c5b4bcc14170866637e72031917 *vignettes/pa.bib
