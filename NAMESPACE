@@ -1,5 +1,6 @@
 importFrom("graphics", plot)
-import(ggplot2, methods)
+importFrom("stats", "formula", "lm", "model.matrix")
+import(ggplot2, methods, grid)
 
 exportClasses(
 	      "brinson",
