@@ -1,4 +1,4 @@
-b18766fa9b4d393d87cfd86e226f8b72 *DESCRIPTION
+b2946eeb13642047d11bc6c7af0452bd *DESCRIPTION
 66f3fd1daa24f34f1ff701a63bee5883 *NAMESPACE
 c4c42677e035df3c585067d43ea19c69 *R/AllClasses.R
 7cd3dff7662714855bbdce151b0eb52b *R/AllGenerics.R
@@ -19,13 +19,13 @@ b3422ba8af89fa45612dc2403983afee *R/show.R
 ff91b49f39e9585ea83d4c81a5779d28 *inst/doc/LuKane_RJournal_submission_final.pdf
 dd0eab9bcf69f2cdc8999ecbd6fb5285 *inst/doc/pa.R
 3453056f31cf6cbbcfd549599eb5a482 *inst/doc/pa.Rnw
-7a30322ec4aa1d7cb8625ea2ef4e6e90 *inst/doc/pa.pdf
+ee54d744d58efe75e0bdeeb4efc8c571 *inst/doc/pa.pdf
 cde26418947f70754b7e33058f957530 *man/brinson-class.Rd
 879640e335c44480478814133a767e23 *man/brinson.Rd
 8e620aa07ed7b9efc4dac725b023fd03 *man/brinsonMulti-class.Rd
 4f0fc88318d48324602c82f28e12e5f8 *man/exposure.Rd
 6b54bb2576296b7afbfb424db05c2ad6 *man/jan.Rd
-255f6b06f264d364860a769294a2f2e2 *man/pa-internal.Rd
+39989a1b0ca2008c9f0bb17be06b54ef *man/pa-internal.Rd
 0b4e9f5aff9da2a205d54f676516bcd7 *man/pa-package.Rd
 4b2d2f0a034197c5b54a5a4999120021 *man/plot.Rd
 349c1ded597978c49e944550d1cf545d *man/quarter.Rd
